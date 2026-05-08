@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-purple-primary: #7C3AED;
+  --color-purple-dark: #5B21B6;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.1);
+}
